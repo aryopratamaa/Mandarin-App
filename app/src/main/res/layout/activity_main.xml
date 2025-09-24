@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0033"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_black"
+            android:text="Mandarin App"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imgHero"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/hero" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:useDefaultMargins="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <Button
+                    android:id="@+id/btnDewasa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:backgroundTint="#FF5722"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:paddingBottom="10dp"
+                    android:text="KELAS DEWASA"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="8dp"
+                    app:icon="@drawable/ic_dewasa"
+                    app:iconGravity="top"
+                    app:iconSize="60dp" />
+
+                <Button
+                    android:id="@+id/btnAnak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:backgroundTint="#4CAF50"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:paddingBottom="10dp"
+                    android:text="KELAS ANAK"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="8dp"
+                    app:icon="@drawable/ic_anak"
+                    app:iconGravity="top"
+                    app:iconSize="60dp" />
+
+                <Button
+                    android:id="@+id/btnPerpus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:backgroundTint="#2195F1"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:paddingBottom="10dp"
+                    android:text="PERPUSTAKAAN"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="8dp"
+                    app:icon="@drawable/ic_library"
+                    app:iconGravity="top"
+                    app:iconSize="60dp" />
+
+                <Button
+                    android:id="@+id/btnJadwal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:backgroundTint="#9C27B0"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:paddingBottom="10dp"
+                    android:text="JADWAL &amp; BIAYA"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="8dp"
+                    app:icon="@drawable/ic_jadwal"
+                    app:iconGravity="top"
+                    app:iconSize="60dp" />
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="#FFBBBB"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Pilihan Menu Favorite"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:alignmentMode="alignMargins"
+                    android:useDefaultMargins="true"
+                    >
+
+                    <Button
+                        android:id="@+id/btnDaring"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:backgroundTint="#FF1717"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="KELAS ONLINE"
+                        android:textColor="#FFFFFF"
+                        android:paddingBottom="10dp"
+                        app:cornerRadius="8dp"
+                        app:icon="@drawable/ic_daring"
+                        app:iconGravity="top"
+                        app:iconSize="60dp" />
+
+                    <Button
+                        android:id="@+id/btnPrivate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:drawablePadding="8dp"
+                        android:text="KELAS PRIVATE"
+                        android:fontFamily="@font/lato_bold"
+                        android:backgroundTint="#FD1717"
+                        android:textColor="#FFFFFF"
+                        android:paddingBottom="10dp"
+                        app:icon="@drawable/ic_private"
+                        app:iconSize="60dp"
+                        app:iconGravity="top"
+                        app:cornerRadius="8dp"/>
+
+                    <Button
+                        android:id="@+id/btnSemuaMentor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:backgroundTint="#FB1717"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:paddingBottom="10dp"
+                        android:text="SEMUA MENTOR"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="8dp"
+                        app:icon="@drawable/ic_kelas"
+                        app:iconGravity="top"
+                        app:iconSize="60dp" />
+
+                </GridLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="HUBUNGI KAMI"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:padding="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:text="Dapatkan informasi lebih mudah dan cepat dengan mengikuti Saluran Whatsapp Resmi sekarang."
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="Hubungi Kami"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2196F3"
+                android:paddingBottom="10dp"
+                app:cornerRadius="10dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
