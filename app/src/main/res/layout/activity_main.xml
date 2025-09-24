@@ -22,12 +22,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_black"
+            android:fontFamily="@font/roboto"
             android:text="Mandarin App"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ScrollView
