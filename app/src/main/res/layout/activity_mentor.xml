@@ -101,29 +101,29 @@
 
                             <ImageView
                                 android:id="@+id/ic_call"
-                                android:layout_width="32dp"
+                                android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_marginEnd="12dp"
-                                android:scaleType="centerCrop"
                                 android:background="?attr/selectableItemBackgroundBorderless"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/ic_call" />
 
                             <ImageView
                                 android:id="@+id/ic_whatsapp"
-                                android:layout_width="32dp"
-                                android:layout_height="40dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_marginEnd="12dp"
-                                android:scaleType="centerCrop"
                                 android:background="?attr/selectableItemBackgroundBorderless"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/ic_wa" />
 
                             <ImageView
                                 android:id="@+id/ic_instagram"
-                                android:layout_width="32dp"
-                                android:layout_height="40dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_marginEnd="12dp"
-                                android:scaleType="centerCrop"
                                 android:background="?attr/selectableItemBackgroundBorderless"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/ic_instagram" />
 
                             <ImageView
@@ -131,8 +131,8 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_marginEnd="12dp"
-                                android:scaleType="centerCrop"
                                 android:background="?attr/selectableItemBackgroundBorderless"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/ic_fb" />
 
                             <ImageView
@@ -140,8 +140,8 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_marginEnd="12dp"
-                                android:scaleType="centerCrop"
                                 android:background="?attr/selectableItemBackgroundBorderless"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/ic_tiktok" />
 
                             <ImageView
@@ -149,11 +149,11 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_marginEnd="12dp"
-                                android:scaleType="centerCrop"
                                 android:background="?attr/selectableItemBackgroundBorderless"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/ic_youtube" />
-
                         </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
