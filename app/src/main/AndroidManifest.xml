@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MandarinApp">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mentor"
+            android:exported="false" />
+        <activity
             android:name=".RegulerDewasa"
             android:exported="false" />
         <activity
@@ -21,7 +27,7 @@
             android:name=".dewasa"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

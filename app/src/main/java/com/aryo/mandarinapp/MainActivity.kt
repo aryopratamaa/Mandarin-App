@@ -37,6 +37,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
         }
 
+        val btnSemuaMentor = findViewById<Button>(R.id.btnSemuaMentor)
+        btnSemuaMentor.setOnClickListener {
+            val intent = Intent(this, Mentor::class.java)
+            startActivity(intent)
+        }
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
