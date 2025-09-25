@@ -15,9 +15,9 @@ class dewasa : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_dewasa)
 
-        val btnReguler = findViewById<LinearLayout>(R.id.btnReguler)
+        val btnReguler = findViewById<LinearLayout>(R.id.btnRegulerDewasa)
         btnReguler.setOnClickListener {
-            val intent = Intent(this, dewasa_onsite::class.java)
+            val intent = Intent(this, RegulerDewasa::class.java)
             startActivity(intent)
         }
 

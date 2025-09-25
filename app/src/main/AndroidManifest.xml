@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MandarinApp">
         <activity
+            android:name=".RegulerDewasa"
+            android:exported="false" />
+        <activity
             android:name=".dewasa_onsite"
             android:exported="false" />
         <activity
