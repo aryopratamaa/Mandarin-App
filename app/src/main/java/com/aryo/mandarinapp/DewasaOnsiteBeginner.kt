@@ -1,25 +1,16 @@
 package com.aryo.mandarinapp
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class dewasa_onsite : AppCompatActivity() {
+class DewasaOnsiteBeginner : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_dewasa_onsite)
-
-        val btnBeginner = findViewById<LinearLayout>(R.id.btnBeginnerDewasaOnsite)
-        btnBeginner.setOnClickListener {
-            val intent = Intent(this, DewasaOnsiteBeginner::class.java)
-            startActivity(intent)
-        }
-
+        setContentView(R.layout.activity_dewasa_onsite_beginner)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
