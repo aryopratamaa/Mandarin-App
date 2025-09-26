@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MandarinApp">
         <activity
+            android:name=".Perpustakaan"
+            android:exported="false" />
+        <activity
             android:name=".DewasaOnsiteBeginner"
             android:exported="false" />
         <activity
