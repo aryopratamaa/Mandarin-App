@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MandarinApp">
         <activity
+            android:name=".DetailKelasOnline"
+            android:exported="false" />
+        <activity
+            android:name=".JadwalBiaya"
+            android:exported="false" />
+        <activity
             android:name=".Perpustakaan"
             android:exported="false" />
         <activity
