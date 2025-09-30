@@ -1,5 +1,7 @@
 package com.aryo.mandarinapp
 
+import android.content.ActivityNotFoundException
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +13,8 @@ import android.net.Uri
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var btnBukaMaps: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val btnSemuaMentor = findViewById<Button>(R.id.btnSemuaMentor)
         val btnDaring = findViewById<Button>(R.id.btnDaring)
         val btnPrivate = findViewById<Button>(R.id.btnPrivate)
-        val btnTelpon = findViewById<Button>(R.id.btnTelpon)
+//        val btnTelpon = findViewById<Button>(R.id.btnTelpon)
 
 
 
@@ -60,18 +64,30 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnTelpon.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:085158335498")
-            startActivity(intent)
+//        btnTelpon.setOnClickListener {
+//            val intent = Intent(Intent.ACTION_DIAL)
+//            intent.data = Uri.parse("tel:085158335498")
+//            startActivity(intent)
+//        }
+
+        btnBukaMaps = findViewById(R.id.btnBukaMaps)
+        btnBukaMaps.setOnClickListener {
+            val lat = 3.2722597235904787
+            val lng = 99.36761243318571
+            openGoogleMapWithCoordinates(this, lat, lng)
         }
 
+    }
 
+    private fun openGoogleMapWithCoordinates(context: Context, lat: Double, lng: Double) {
+        val uri = Uri.parse("google.navigation:q=$lat,$lng&mode=d")
+        val intent = Intent(Intent.ACTION_VIEW, uri)
+        intent.setPackage("com.google.android.apps.maps")
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        try {
+            context.startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+                Toast.makeText(context, "TIDAK TERSEDIA DI GOOGLE MAPS", Toast.LENGTH_LONG).show()
         }
     }
 }
